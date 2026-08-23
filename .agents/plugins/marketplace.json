@@ -1,0 +1,20 @@
+{
+  "name": "endeavor-one",
+  "interface": {
+    "displayName": "Endeavor One"
+  },
+  "plugins": [
+    {
+      "name": "endeavor-one",
+      "source": {
+        "source": "local",
+        "path": "./plugins/endeavor-one"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

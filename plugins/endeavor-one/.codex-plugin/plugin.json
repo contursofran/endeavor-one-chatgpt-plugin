@@ -1,0 +1,28 @@
+{
+  "name": "endeavor-one",
+  "version": "0.1.0",
+  "description": "Endeavor One Sandbox MCP access and safe workflow instructions for staff.",
+  "author": {
+    "name": "Endeavor Global",
+    "url": "https://endeavor.org/"
+  },
+  "homepage": "https://one.endeavor.org/",
+  "repository": "https://github.com/contursofran/endeavor-one-chatgpt-plugin",
+  "keywords": ["endeavor", "crm", "salesforce", "meetings"],
+  "apps": "./.app.json",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Endeavor One Sandbox",
+    "shortDescription": "Connect to Sandbox and use Endeavor One workflows safely.",
+    "longDescription": "Install the private Endeavor One Sandbox MCP app together with reusable instructions for searching Endeavor One and performing supported meeting updates. Each staff member authorizes the connection with their own account.",
+    "developerName": "Endeavor Global",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Workflow"],
+    "websiteURL": "https://one.endeavor.org/",
+    "defaultPrompt": [
+      "Find an Endeavor One Sandbox profile and summarize the relevant professional context.",
+      "Show me the meeting and rating context before I make an update.",
+      "Prepare a supported meeting change and ask me to confirm it."
+    ]
+  }
+}
