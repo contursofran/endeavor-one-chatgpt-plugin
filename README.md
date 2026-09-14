@@ -30,3 +30,20 @@ See [OpenAI's plugin packaging and workspace publishing documentation](https://d
 ## Environments
 
 This repository currently distributes Sandbox only. Endeavor One Pre Prod must use a separate registered MCP app, Auth0 grant, plugin package, and workspace role assignment.
+
+### Sandbox registration
+
+The package references a registered ChatGPT app through `plugins/endeavor-one/.app.json`. The MCP endpoint and OAuth configuration live in that registration, not in this repository.
+
+| Setting | Expected value |
+| --- | --- |
+| Registered app | `asdk_app_6aa814e1383881918b89895adac4f449` |
+| MCP endpoint and OAuth audience | `https://mcp-sandbox-one-endeavor.vercel.app/api/mcp` |
+| Auth0 issuer | `https://endeavor-one-mcp-sandbox.us.auth0.com/` |
+| Salesforce | Sandbox FullCopy |
+
+Version `0.1.1` replaces the legacy app reference. After updating the repository, refresh or reinstall the plugin from the repository marketplace and start a new chat. Workspace-published copies must also be updated by their owner; pushing this repository does not update an existing published copy automatically.
+
+When connecting, verify that the login hostname is `endeavor-one-mcp-sandbox.us.auth0.com` and that only **Salesforce (sandbox)** is offered. A login on `dev-bbht8lnjhvupwysd.us.auth0.com` with both Salesforce options indicates an older registration is still being used.
+
+Validate authentication separately from installation: complete Sandbox sign-in, then ask the plugin to get profile search options without creating or updating records. A successful package install alone does not prove authenticated MCP access.
