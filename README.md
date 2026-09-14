@@ -37,7 +37,7 @@ The package references a registered ChatGPT app through `plugins/endeavor-one/.a
 
 | Setting | Expected value |
 | --- | --- |
-| Registered app | `asdk_app_6aa814e1383881918b89895adac4f449` |
+| Registered app | `asdk_app_6aa8230c1ba0819192f733f50ee3a453` |
 | MCP endpoint and OAuth audience | `https://mcp-sandbox-one-endeavor.vercel.app/api/mcp` |
 | Auth0 issuer | `https://endeavor-one-mcp-sandbox.us.auth0.com/` |
 | Salesforce | Sandbox FullCopy |
@@ -47,3 +47,5 @@ Version `0.1.1` replaces the legacy app reference. After updating the repository
 When connecting, verify that the login hostname is `endeavor-one-mcp-sandbox.us.auth0.com` and that only **Salesforce (sandbox)** is offered. A login on `dev-bbht8lnjhvupwysd.us.auth0.com` with both Salesforce options indicates an older registration is still being used.
 
 Validate authentication separately from installation: complete Sandbox sign-in, then ask the plugin to get profile search options without creating or updating records. A successful package install alone does not prove authenticated MCP access.
+
+Version `0.1.2` references the Sandbox registration created in the work ChatGPT account. A repository package does not grant access to a private app owned by another account. Confirm the registered app is accessible to each intended account or workspace before distributing it; changing the app ID alone does not publish that dependency.
